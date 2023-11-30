@@ -34,3 +34,4 @@ echo.  > .gitignore
 echo. > README.md 
 
 echo Project directory structure created for %PROJECT_NAME%.
+
