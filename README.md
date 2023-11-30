@@ -51,3 +51,4 @@ project_root/
 and there you go, you have a whole git repository initialized along with a template to a nicely organized project.
 Now get to work!
 
+___
