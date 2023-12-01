@@ -54,6 +54,8 @@ Now get to work!
 ## How to use the `Create_Projects.exe` software
 ___
 
+Find the file at `./EXE Distribution File/dist/`
+
 1. Open the executable file and select browse
 
 ![1](https://github.com/iamzehan/Windows-Batch-Master/assets/43857150/d5166fbb-a349-4f84-8ae4-d8d19cfe34b4)
