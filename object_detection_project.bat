@@ -5,14 +5,12 @@ if "%1" == "" (
     echo Usage: %0 ^<project_name^>
     exit /b 1
 )
-@REM # Crete a Projects Folder to create all the projects in this folder.
-cd Projects
 
-set "PROJECT_NAME=%1"
-set "ROOT_DIR=%CD%\%PROJECT_NAME%"
+set "ORIGINAL_DIR=%CD%"
+set "ROOT_DIR=%1"
 
 mkdir "%ROOT_DIR%" 2>nul
-cd "%ROOT_DIR%" || exit /b 1
+cd /D "%ROOT_DIR%" || exit /b 1
 
 git init
 echo.  > README.md
@@ -64,5 +62,6 @@ mkdir docs
 
 echo.  > .gitignore
 
-echo Object detection project directory structure created for %PROJECT_NAME%.
+echo Object detection project directory structure created at %ROOT_DIR%
 exit /b 0
+

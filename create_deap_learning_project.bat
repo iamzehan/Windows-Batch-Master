@@ -3,13 +3,11 @@ if "%1" == "" (
     echo Usage: %0 ^<project_name^>
     exit /b 1
 )
-
-cd Projects
-set "PROJECT_NAME=%1"
-set "ROOT_DIR=%CD%\%PROJECT_NAME%"
+set "ORIGINAL_DIR=%CD%"
+set "ROOT_DIR=%1"
 
 mkdir "%ROOT_DIR%" 2>nul
-cd "%ROOT_DIR%" || exit /b 1
+cd /D "%ROOT_DIR%" || exit /b 1
 
 git init .
 mkdir data
@@ -34,7 +32,10 @@ mkdir docs
 echo.  > .gitignore
 echo. > README.md 
 
-echo Project directory structure created for %PROJECT_NAME%.
+echo Project directory structure created at %ROOT_DIR%.
+
+cd /D "%ORIGINAL_DIR%"
+
 
 
  
