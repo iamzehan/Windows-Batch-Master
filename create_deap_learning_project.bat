@@ -4,6 +4,7 @@ if "%1" == "" (
     exit /b 1
 )
 
+cd Projects
 set "PROJECT_NAME=%1"
 set "ROOT_DIR=%CD%\%PROJECT_NAME%"
 
@@ -34,4 +35,7 @@ echo.  > .gitignore
 echo. > README.md 
 
 echo Project directory structure created for %PROJECT_NAME%.
+
+
+ 
 
