@@ -39,7 +39,7 @@ def process_batch_file():
 
 # Create the main application window
 app = tk.Tk()
-app.title("Batch File Processor")
+app.title("Create Projects")
 
 # Configure window attributes
 app.geometry("450x250")  # Set initial size
